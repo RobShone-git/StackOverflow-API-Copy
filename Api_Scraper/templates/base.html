@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>StackOverflow Scraper</title>
+</head>
+<body>
+
+ <!-- Form that submits data using the POST method -->
+    <form method="post" action="{{ url_for('start') }}">
+        <label for="user_input">Enter something:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display a message if it exists -->
+    {% if results %}
+        <p>{{ results }}</p>
+    {% endif %}
+
+
+</body>
+</html>
